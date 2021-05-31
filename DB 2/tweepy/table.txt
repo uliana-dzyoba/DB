@@ -1,0 +1,5 @@
+        polarity  subjectivity
+mean    0.049393       0.15048
+amax    1.000000       1.00000
+amin   -0.700000       0.00000
+median  0.000000       0.00000
