@@ -20,7 +20,9 @@ def view_journal():
 def view_online():
     users = r.smembers("online")
     print("Users online:")
-    print(users)
+    for user in users:
+        if user is not "":
+            print(user)
 
 def view_active():
     n = int(input('Enter number of users, 0 for all: '))
@@ -46,6 +48,7 @@ def show_menu():
     print("[1] View journal")
     print("[2] View most active users")
     print("[3] View spammers")
+    print("[4] View users online")
     print("[0] Exit")
     print()
 
@@ -73,6 +76,8 @@ if __name__ == '__main__':
                 view_active()
             elif option == 3:
                 view_spammers()
+            elif option == 4:
+                view_online()
             else:
                 print("invalid option")
             print()
